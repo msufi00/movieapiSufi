@@ -1,0 +1,161 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e46702;
+  color: #fff;
+}
+
+header {
+  background-color: #e46702;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+  max-width: 100%;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #e4d54f;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #7e0202;
+}
+
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-card {
+  position: relative;
+  margin: 10px;
+  width: 200px;
+  background-color: #333;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-card > img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.movie-card > .movie-details {
+  display: none;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: center;
+  z-index: 1;
+}
+
+.movie-card.open > .movie-details {
+  display: block;
+}
+
+.movie-card > h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.movie-card > .movie-details > p {
+  margin: 10px 0;
+}
+
+.movie-card > .movie-details > p:first-child {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.movie-poster {
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: auto;
+}
+
+.movie-poster .mark-as-watched {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  background-color: #e50914;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s;
+}
+
+.movie-poster .mark-as-watched:hover {
+  background-color: #ff5252;
+  transform: scale(1.1);
+}
+
+.logo img {
+  max-width: 200px;
+  height: auto;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.button-group button {
+  margin: 10px -30px; /* Ubah margin di sini */
+  margin-left: -1px;
+}
+
+.button-group button.update-status {
+  background-color: #36a64f;
+}
+
+.button-group button.update-status.clicked {
+  background-color: #29629f;
+}

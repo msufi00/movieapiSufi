@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Watchlist</title>
+  <link rel="stylesheet" href="watchlist.css">
+  <style>
+    .logo img {
+      max-width: 200px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="container">
+        <a href="./index.html">
+          <img src="./src/movielogo-removebg-preview.png" alt="Logo">
+        </a>
+      </div>
+    </div>
+    <h1>Movie Watchlist</h1>
+    <form id="searchForm" action="#">
+      <input type="text" id="searchInput" placeholder="Enter movie title">
+      <button type="submit">Search</button>
+    </form>
+  </header>
+  <main>
+    <div id="moviesContainer" class="movies-container"></div>
+  </main>
+  <script src="watchlist.js"></script>
+</body>
+</html>

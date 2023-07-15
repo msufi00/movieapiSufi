@@ -1,0 +1,333 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e46702;
+  color: #fff;
+  background-image: url("./src/movielogo-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left bottom;
+  background-size: 302px 304px;
+}
+
+.t1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+  height: 60px;
+  width: 100%;
+  background: #f90;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+label.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #000;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+nav .active {
+  background-color: #000;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  color: #f90;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.input-container {
+  width: 327px;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  height: 50px;
+  padding: 15px;
+  transition: .2s linear;
+  border: 3px solid black;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.input:focus {
+  outline: none;
+  border: 1px solid black;
+  box-shadow: -5px -5px 0px black;
+}
+
+.input-container:hover > .icon {
+  animation: anim 1s linear infinite;
+}
+
+@keyframes anim {
+  0%,
+  100% {
+    transform: translateY(calc(-50% - 5px)) scale(1);
+  }
+
+  50% {
+    transform: translateY(calc(-50% - 5px)) scale(1.1);
+  }
+}
+
+button {
+  padding: 16px 48px;
+  background-color: #e50914;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background-color: #ff5252;
+  transform: scale(1.1);
+}
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.movie-container > div > p {
+  margin: 10px;
+  color: #e1d0d0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+
+
+
+.movie-container > div {
+  position: relative;
+  margin: 10px;
+  width: 338px;
+  height: 485px;
+  background-color: #b71c1c;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.movie-container > div:hover {
+  transform: translateY(-5px);
+}
+
+.movie-container > div > img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+
+
+.movie-container > div > .movie-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.movie-container > div:hover > .movie-details {
+  opacity: 1;
+}
+
+.movie-container > div > .movie-details > p {
+  margin: 5px 0;
+}
+
+.movie-container > div > .movie-details > .read-more,
+.movie-container > div > .movie-details > .read-less {
+  color: #e50914;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.movie-container > div > .movie-details > .read-more:hover,
+.movie-container > div > .movie-details > .read-less:hover {
+  color: #ff5252;
+}
+
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Additional styles for responsiveness */
+@media screen and (max-width: 768px) {
+  .movie-container > div {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #e50914;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 20%;
+    max-width: 150px;
+    font-size: 14px;
+  }
+}
+
+.result-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.result-container .movie-container {
+  position: relative;
+  margin: 10px;
+  width: 200px;
+  background-color: #000;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.result-container .movie-container:hover {
+  transform: translateY(-5px);
+}
+
+.result-container .movie-container > img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.result-container .movie-container > .movie-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.result-container .movie-container:hover > .movie-details {
+  opacity: 1;
+}
+
+.result-container .movie-container > .movie-details > p {
+  margin: 5px 0;
+}
+
+.result-container .movie-container > .movie-details > .read-more,
+.result-container .movie-container > .movie-details > .read-less {
+  color: #e50914;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.result-container .movie-container > .movie-details > .read-more:hover,
+.result-container .movie-container > .movie-details > .read-less:hover {
+  color: #ff5252;
+}
+
+@media screen and (max-width: 768px) {
+  .result-container .movie-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .result-container {
+    margin-top: 20px;
+  }
+}
+

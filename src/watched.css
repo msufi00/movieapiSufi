@@ -1,0 +1,97 @@
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e46702;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-card {
+  position: relative;
+  margin: 10px;
+  width: 200px;
+  background-color: #333;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-card .movie-poster img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.movie-card .button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.movie-card .button-group .delete-movie {
+  padding: 8px 16px;
+  background-color: #e50914;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.movie-card .button-group .delete-movie:hover {
+  background-color: #ff5252;
+  transform: scale(1.1);
+}
+
+.back-link {
+  display: inline-block;
+  padding: 10px 46px;
+  background-color: #000; /* Updated to black */
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.back-link::before {
+  content: "\2190"; /* Unicode character for left arrow */
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.back-link:hover {
+  background-color: #7e0202;
+  transform: scale(1.1);
+}

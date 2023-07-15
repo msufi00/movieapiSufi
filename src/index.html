@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KPMB MOVIE</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+
+</head>
+
+
+<body>
+  <nav>
+    <label class="logo">KPMB Movie</label>
+    <ul>
+      <li><a class="active" href="#">Home</a></li>
+      <li><a href="./src/details.html">Search Movie DETAILS</a></li>
+      <li><a href="watchlist.html">Watchlist</a></li>
+      <li><a href="watched.html">Watched</a></li>
+    </ul>
+    <label id="icon">
+      <i class="fas fa-bars"></i>
+    </label>
+  </nav>
+  <br><br><br><br><br><br>
+  <h1 class="t1">Movie Search</h1>
+  <br>
+  <div class="search-bar">
+    <div class="input-container">
+      <input type="text" id="searchData" class="input" placeholder="Enter movie title">
+      <span class="icon">
+        <i class="fas fa-search"></i>
+      </span>
+    </div>
+    <button onclick="buttonClicked()" class="search-button">Search</button>
+  </div>
+  
+  <br><br><br>
+  <div id="demo" class="movie-container"></div>
+
+  <footer class="footer">
+    <!-- Add your footer content here -->
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
